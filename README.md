@@ -58,44 +58,7 @@ License
 
 Contact
 - For questions or collaboration, create an issue or contact the repository owner.
+Contact
+- For questions or collaboration, create an issue or contact the repository owner.
 
-Hızlı Başlangıç
-
-1. Ortamı hazırlayın (önerilen):
-
-```bash
-python -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-```
-
-2. Özellik dosyanızı hazırlayın veya yolunu belirtin. Varsayılan yol: `/kaggle/input/morefeatures2improveddataset/gtzan_multi_modal_features_hps2.pkl`.
-
-3. Eğitimi başlatın:
-
-```bash
-# Tercih edilen: paketlenmiş runner
-python train.py --features /path/to/features.pkl --epochs 100 --batch-size 64 --lr 1e-4 --model-dir ./models
-
-# Alternatif (eski wrapper uyumluluğu):
-python Propes_model --features /path/to/features.pkl --epochs 100
-```
-
-
-Output
-- The best model checkpoint is written to the directory specified by `--model-dir` as `best_multi_modal_gtzan_model.pth`.
-- Training metrics are appended to `training_results_single_split.csv` and a plot is saved as `training_history.png` (or `training_history_single_split.png` depending on runner).
-
-
-Notes and tips
-- `src/propes_model/models.py` uses `torchvision.models.resnet50(pretrained=True)` by default. If you are offline or prefer not to download pretrained weights, change `pretrained=True` to `pretrained=False`.
-- The DataLoader `num_workers` is set to `0` by default for portability. Increase it (e.g., `num_workers=4`) for faster data loading on multi-core machines.
-- Large model weight files are ignored via `.gitignore`. For versioning large files consider using Git LFS.
-
-
-Contributing
-- Contributions are welcome. Please open issues or submit pull requests. If you add new dependencies, update `requirements.txt` accordingly.
-
-
-License
-- Add a `LICENSE` file in the repository root to specify the project license.
+If you'd like, I can also add a `LICENSE` (e.g. MIT) and a lightweight GitHub Actions workflow for basic checks (syntax and linting).
