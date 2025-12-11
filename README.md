@@ -65,7 +65,7 @@ If you'd like, I can also add a `LICENSE` (e.g. MIT) and a lightweight GitHub Ac
 
 ## Architecture
 
-![Multi-modal Architecture](docs/architecture.png)
+![Multi-modal Architecture](docs/architecture.jpeg)
 
 The project uses a multi-branch architecture: three ResNet-50 branches process different mel-spectrogram views (original, harmonic, and percussive), while lightweight MLP branches process auxiliary features (MFCC, chroma, and tempogram). The outputs are concatenated and passed through a small attention module that computes a weight for each modality. Each modality's feature vector is scaled by its attention weight and then concatenated again for final fusion through fully-connected layers and classification.
 
