@@ -1,0 +1,32 @@
+import argparse
+import pickle
+import numpy as np
+from typing import Any, Dict, List, Tuple
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+import os
+import sys
+import torch
+import torch.nn as nn
+import torch.optim as optim
+"""Top-level wrapper to run the modularized propes_model package.
+
+This file kept for backwards compatibility: executing it will run
+the `propes_model.train` entrypoint. For the modular package, prefer
+running `python train.py --features /path/to/features.pkl ...`.
+"""
+
+import sys
+from pathlib import Path
+
+# Ensure `src` package is on sys.path so `propes_model` can be imported
+ROOT = Path(__file__).resolve().parent
+SRC = ROOT / "src"
+if str(SRC) not in sys.path:
+    sys.path.insert(0, str(SRC))
+
+from propes_model.train import main
+
+
+if __name__ == "__main__":
+    main()
