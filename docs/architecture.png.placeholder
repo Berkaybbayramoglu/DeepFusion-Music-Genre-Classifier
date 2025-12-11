@@ -1,0 +1,6 @@
+This is a placeholder file. Replace with the actual architecture image named 'architecture.png' placed in this folder.
+
+Steps to replace:
+1. Save the real image as 'architecture.png'.
+2. Copy it here: `cp /path/to/architecture.png docs/architecture.png`
+3. Commit: `git add docs/architecture.png && git commit -m "docs: add architecture diagram" && git push origin main`
